@@ -7,7 +7,8 @@
 <body>
 	<button onclick='show()'>Використати поточний список</button>
 	<p id="out" style="display: none"></p>
-
+	<button id="btn" style="display: " onclick='dfile()'>Загрузити файл</button>
+	<p id='text1'></p>
 <script>
 function show(){
 	if(document.getElementById('out').style.display = 'none') {document.getElementById('out').style.display = ' block'};
@@ -65,7 +66,10 @@ for (key in University) {
 }
 document.getElementById('out').innerHTML += "<h2>Internship student's :</h2>";
 aaaa(Intership);
-
+function dfile(){
+	document.getElementById("text1").innerHTML = "<input name='myFile' type='file'>";
+	document.getElementById("btn").style.display = "none";
+}
 </script>
 
 </body> 
