@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	
+</head>
+<body>
+	<button onclick='show()'>Використати поточний список</button>
+	<p id="out" style="display: none"></p>
+
+<script>
+function show(){
+	if(document.getElementById('out').style.display = 'none') {document.getElementById('out').style.display = ' block'};
+}
+var Intership = {};
+var University = {
+    "ID_01": {
+        name: "Ivan",
+        surmane: "Baran",
+        knowledge: 0
+    },
+    "ID_02": {
+        name: "Andriy",
+        surmane: "Baran",
+        knowledge: 1
+    },
+    "ID_03": {
+        name: "Mykola",
+        surmane: "Baran",
+        knowledge: 1
+    },
+    "ID_04": {
+        name: "Taras",
+        surmane: "Baran",
+        knowledge: 0
+    },
+    "ID_05": {
+        name: "Semen",
+        surmane: "Baran",
+        knowledge: 1
+    },
+    "ID_06": {
+        name: "Daryna",
+        surmane: "Baran",
+        knowledge: 1
+    },
+}
+
+function aaaa(str) {
+	for (key in str){
+		document.getElementById('out').innerHTML += key + " : " + str[key].name + "  ";
+		document.getElementById('out').innerHTML += str[key].surmane  + "  ";
+		document.getElementById('out').innerHTML += str[key].knowledge  +'<br>';
+		//document.getElementById('out').innerHTML += "<hr>";
+	}
+}
+document.getElementById('out').innerHTML += "<h2>University student's :</h2>";
+
+aaaa(University);
+
+for (key in University) {
+	if (University[key].knowledge == 1) {
+		Intership[key] = University[key];
+	}
+}
+document.getElementById('out').innerHTML += "<h2>Internship student's :</h2>";
+aaaa(Intership);
+
+</script>
+
+</body> 
+</html>
